@@ -1,0 +1,8 @@
+{
+  "model_type": "Random Forest with SMOTE",
+  "threshold": 0.5,
+  "reported_test_precision": 0.9469,
+  "reported_test_recall": 0.7815,
+  "reported_test_f1": 0.85629,
+  "reported_test_pr_auc": 0.88994
+}

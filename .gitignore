@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+mlruns/
+mlflow.db
+data/transactions.csv
+.ipynb_checkpoints/
+.pytest_cache/

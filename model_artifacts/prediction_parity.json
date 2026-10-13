@@ -1,0 +1,7 @@
+{
+    "test_rows_checked": 60000,
+    "labels_identical": true,
+    "probabilities_match": true,
+    "max_probability_difference": 2.220446049250313e-16,
+    "result": "PASS"
+}
