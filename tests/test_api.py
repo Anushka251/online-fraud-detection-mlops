@@ -76,7 +76,7 @@ def test_predict_with_complete_transaction():
 
         response = client.post("/predict", json=sample)
 
-        assert response.status_code == 200
+        assert response.status_code == 200, (f"Expected 200 but got {response.status_code}. "f"API response: {response.text}")
 
         result = response.json()
         assert result["prediction"] in (0, 1)
