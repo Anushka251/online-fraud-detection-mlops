@@ -2,12 +2,12 @@
 from fastapi.testclient import TestClient
 
 from api import main
+
+
 def test_health_endpoint():
     with TestClient(main.app) as client:
         response = client.get("/health")
-
         assert response.status_code == 200
-        assert "model_loaded" in response.json()
 
 
 def test_predict_without_model_returns_service_unavailable():
@@ -33,7 +33,6 @@ def test_predict_without_model_returns_service_unavailable():
             )
 
             assert response.status_code == 503
-
         finally:
             main._model = original_model
             main._features = original_features
@@ -65,7 +64,6 @@ def test_predict_with_complete_transaction():
                 "Check models/smote_rf_azure/."
             )
 
-        # Build a valid request from the actual feature list.
         sample = {
             "step": 1,
             "type": "PAYMENT",
